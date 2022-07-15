@@ -113,16 +113,8 @@ gitignored/*
 
 gitignored
 
-
-
 ##### pycharm idea
 
 .idea
-/gitignored/
-/gitignored/data
-/gitignored/results
 
-/data/
-./data
-./data/*
-data
+
