@@ -1,0 +1,151 @@
+{
+        "dataset": {
+                "OMNIGLOT": {
+                        "input_dim": [
+                                1,
+                                105,
+                                105
+                        ],
+                        "output_dim": 1623,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 19456
+                },
+                "CIFAR10": {
+                        "input_dim": [
+                                3,
+                                32,
+                                32
+                        ],
+                        "output_dim": 10,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 50000
+                },
+                "CIFAR100": {
+                        "input_dim": [
+                                3,
+                                32,
+                                32
+                        ],
+                        "output_dim": 100,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 50000
+                },
+                "IMAGENET": {
+                        "input_dim": [
+                                3,
+                                300,
+                                300
+                        ],
+                        "output_dim": 20000,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 14197122
+                },
+                "MNIST": {
+                        "input_dim": [
+                                1,
+                                28,
+                                28
+                        ],
+                        "output_dim": 10,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 60000
+                },
+                "TEST@HOME": {
+                        "input_dim": [
+                                3,
+                                244,
+                                244
+                        ],
+                        "output_dim": 2,
+                        "hidden_dim": [
+                                128
+                        ],
+                        "N": -1
+                },
+                "RUBBISH": {
+                        "input_dim": [
+                                1,
+                                3,
+                                3
+                        ],
+                        "output_dim": 2,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 10000
+                },
+                "TINYIMAGENET": {
+                        "input_dim": [
+                                3,
+                                128,
+                                128
+                        ],
+                        "output_dim": 20000,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 100096
+                },
+                "IMAGENETTE": {
+                        "input_dim": [
+                                3,
+                                128,
+                                128
+                        ],
+                        "output_dim": 10,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 12928
+                },
+                "IMAGEWOOF": {
+                        "input_dim": [
+                                3,
+                                128,
+                                128
+                        ],
+                        "output_dim": 10,
+                        "hidden_dim": [
+                                512
+                        ],
+                        "N": 12928
+                }
+        },
+        "model": {
+        },
+        "l0": {
+                "loss": "L0CrossEntropy",
+                "train_scheme": "L0Trainer",
+                "prune_criterion": "EmptyCrit",
+                "pruning_rate": 0.0,
+                "growing_rate": 0.0,
+                "outer_layer_pruning": true,
+                "disable_weightplot": false,
+                "disable_netplot": false,
+                "prune_delay": 10000000000000
+        },
+        "GateDecorators": {
+                "train_scheme": "TickTock"
+        },
+        "GateDecoratorsRes": {
+                "train_scheme": "TickTock"
+        },
+        "hoyer_square": {
+                "loss": "HoyerSquare",
+                "prune_criterion": "HoyerSquare"
+        },
+        "group_hoyer_square": {
+                "loss": "GroupHoyerSquare",
+                "prune_criterion": "GroupHoyerSquare"
+        }
+}
