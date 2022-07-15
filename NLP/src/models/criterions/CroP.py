@@ -36,7 +36,7 @@ class CroP(SNIP):
 
         net = self.model.eval()
 
-        self.their_implementation(device, iterations, net, train_loader)
+        self.get_scores(device, iterations, net, train_loader)
 
         # collect gradients
         grads = {}
@@ -62,7 +62,7 @@ class CroP(SNIP):
 
         return all_scores, grads, log10, norm_factor
 
-    def their_implementation(self, device, iterations, net, train_loader):
+    def get_scores(self, device, iterations, net, train_loader):
         net.zero_grad()
         weights = []
         for layer in net.modules():

@@ -45,7 +45,7 @@ class CroPStructured(General):
         iterations = SNIP_BATCH_ITERATIONS
         device = self.device
 
-        self.their_implementation(device, iterations, net, train_loader)
+        self.get_scores(device, iterations, net, train_loader)
 
         # gather elasticities
         grads_abs = OrderedDict()
@@ -77,7 +77,7 @@ class CroPStructured(General):
         log10 = all_scores.sort().values.log10()
         return all_scores, grads_abs2, log10, norm_factor, [x.shape[0] for x in grads_abs.values()]
 
-    def their_implementation(self, device, iterations, net, train_loader):
+    def get_scores(self, device, iterations, net, train_loader):
         net.zero_grad()
         weights = []
         for layer in net.modules():
