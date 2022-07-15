@@ -105,4 +105,24 @@ venv.bak/
 
 
 
+###### local data
+./gitignored/
+./gitignored/*
+gitignored/*
+
+
+gitignored
+
+
+
+##### pycharm idea
+
 .idea
+/gitignored/
+/gitignored/data
+/gitignored/results
+
+/data/
+./data
+./data/*
+data
