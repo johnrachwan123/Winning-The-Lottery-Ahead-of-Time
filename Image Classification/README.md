@@ -1,6 +1,7 @@
 ### Training Examples & Results
 
 Some examples of training the models from the paper. OneCycleLR is use to train sparse models as they have been shown to benefit from Learning Rate warmup.
+The code is inspired by the following [repository](https://github.com/StijnVerdenius/SNIP-it)
 
 #### Unstructured Pruning (EarlyCroP)
 
