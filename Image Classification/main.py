@@ -93,8 +93,7 @@ def main(
         lr=arguments.learning_rate,
         weight_decay=arguments.l2_reg,
     )
-    scheduler = OneCycleLR(optimizer, max_lr=arguments.learning_rate,
-                                 steps_per_epoch=len(train_loader), epochs=arguments.epochs)
+    scheduler = StepLR(optimizer, step_size=30000, gamma=0.2)
 
     if not arguments.eval:
 
