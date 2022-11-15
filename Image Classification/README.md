@@ -16,7 +16,7 @@ python3 main.py --model ResNet18 --data_set CIFAR10 --prune_criterion EarlyCroP 
 To run training for EarlyCroP our unstructured pruning algorithm - with a VGG16 on CIFAR10, run one of the following:
 
 ```train
-python3 main.py --model VGG16 --data_set CIFAR10 --prune_criterion EarlyCroPStructured --pruning_limit 0.9 --epochs 80
+python3 main.py --model VGG16 --data_set CIFAR10 --prune_criterion EarlyCroPStructured --pruning_limit 0.88 --epochs 80 --batch_size 256 --eval_freq 195
 ```
 
 ### Visualization
@@ -39,3 +39,4 @@ The regular arguments for running are the following. **Additionally, there are s
 | --epochs       | Number of epochs to train for| float |
 | --model | Which Neural Network Model to use | str
 | --data_set | Which dataset to use (MNIST, CIFAR10, CIFAR100 etc.) | str
+| --eval_freq | After how many batches should the model be evaluated | int
