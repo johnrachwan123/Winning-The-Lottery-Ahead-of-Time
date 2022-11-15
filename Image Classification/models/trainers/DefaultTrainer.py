@@ -258,10 +258,8 @@ class DefaultTrainer:
                     else:
                         self.threshold = (torch.norm(self.weights - weights, p=2) / torch.norm(self.weights, p=2)) * (
                                 1 - self._arguments.pruning_limit)
-                print(torch.norm(self.weights - weights, p=2) / torch.norm(self.weights,p=2) - self.diff)
-                print(self.threshold)
-                if self.threshold is not None and torch.norm(self.weights - weights, p=2) / torch.norm(self.weights,
-                                                                                                       p=2) - self.diff < self.threshold:
+                if self.threshold is not None and torch.abs(torch.norm(self.weights - weights, p=2) / torch.norm(self.weights,
+                                                                                                       p=2) - self.diff) < self.threshold:
                     self._stable = True
                 self.diff = torch.norm(self.weights - weights, p=2) / torch.norm(self.weights, p=2)
             if self.weights is None:
