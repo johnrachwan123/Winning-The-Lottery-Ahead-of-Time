@@ -8,7 +8,7 @@ The code is inspired by the following [repository](https://github.com/StijnVerde
 To run training for EarlyCroP our unstructured pruning algorithm - with a ResNet18 on CIFAR10, run one of the following:
 
 ```train
-python3 main.py --model ResNet18 --data_set CIFAR10 --prune_criterion EarlyCroP --pruning_limit 0.98 --outer_layer_pruning --epochs 80
+python3 main.py --model ResNet18 --data_set CIFAR10 --prune_criterion EarlyCroP --pruning_limit 0.98 --outer_layer_pruning --epochs 80 --batch_size 256 --eval_freq 195
 ```
 
 #### Structured Pruning (EarlyCroP-Structured)
