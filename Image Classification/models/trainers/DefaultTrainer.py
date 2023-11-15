@@ -452,8 +452,8 @@ class DefaultTrainer:
                 # save what needs to be saved
                 self._handle_backing_up(epoch)
 
-            if self._arguments.skip_first_plot:
-                self._metrics.handle_weight_plotting(epoch + 1, trainer_ns=self)
+            # if self._arguments.skip_first_plot:
+            #     self._metrics.handle_weight_plotting(epoch + 1, trainer_ns=self)
 
             # example last save
             save_models([self._model, self._metrics], "finished")
