@@ -532,7 +532,7 @@ class DefaultTrainer:
     def _is_not_finished_pruning(self):
         if self._arguments.prune_criterion not in DURING_TRAINING and self._model.pruned_percentage > self._arguments.pruning_limit - 0.005:
             return False
-        if self._criterion.steps is not None and len(self._criterion.steps) == 0:
+        if hasattr(self._criterion, 'steps') and self._criterion.steps is not None and len(self._criterion.steps) == 0:
             return False
         return self._arguments.pruning_limit > self._model.pruned_percentage \
                or \
