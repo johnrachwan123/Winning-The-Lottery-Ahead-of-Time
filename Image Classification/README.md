@@ -19,6 +19,8 @@ To run training for EarlyCroP our unstructured pruning algorithm - with a VGG16 
 python3 main.py --model VGG16 --data_set CIFAR10 --prune_criterion EarlyCroPStructured --pruning_limit 0.88 --epochs 80 --batch_size 256 --eval_freq 195
 ```
 
+For Resnet architecutres please use the "Res" versions of the criterions such as "CroPStructuredRes" instead of "CroPStructured"
+
 ### Visualization
 
 Results and saved models will be logged to the terminal, logfiles in result-folders and in tensorboard files in the `/gitignored/results/` folder. To run tensorboard's interface run the following:
